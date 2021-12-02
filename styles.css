@@ -15,17 +15,19 @@
 }
 body {
   background-color: var(--Very-light-gray-background-headings-buttons);
-}
-.container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 920px;
+}
+.container {
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 920px;
   font-size: 15px;
   background-color: var(--Very-light-gray-background-headings-buttons);
-  border-radius: 50px;
 }
 
 .sedans {
@@ -60,11 +62,18 @@ body {
 }
 .button {
   padding: 14px 18px;
-
   background-color: var(--Very-light-gray-background-headings-buttons);
+  margin-top: 50px;
   max-width: 147px;
+  border: 1px solid white;
   border-radius: 30px;
   text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.button:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
 }
 .sedans-btn {
   color: var(--Bright-orange);
@@ -85,4 +94,36 @@ h1 {
   font-size: 40px;
   font-stretch: condensed;
   font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  body {
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  .container {
+    flex-direction: column;
+    margin: 80px 20px;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  .sedans {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    gap: 30px;
+  }
+  .luxury {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    gap: 30px;
+  }
+  .suvs {
+    gap: 30px;
+  }
+  .button {
+    margin-top: 0px;
+  }
 }
